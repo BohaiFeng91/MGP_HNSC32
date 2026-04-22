@@ -25,3 +25,11 @@ Wang X, Yang S, Zhang J, Wang M, Zhang J, Yang W, Huang J, Han X. Transformer-ba
 
 Wagner SJ, Reisenbüchler D, West NP, Niehues JM, Zhu J, Foersch S, Veldhuizen GP, Quirke P, Grabsch HI, van den Brandt PA, Hutchins GGA, Richman SD, Yuan T, Langer R, Jenniskens JCA, Offermans K, Mueller W, Gray R, Gruber SB, Greenson JK, Rennert G, Bonner JD, Schmolze D, Jonnagaddala J, Hawkins NJ, Ward RL, Morton D, Seymour M, Magill L, Nowak M, Hay J, Koelzer VH, Church DN; TransSCOT consortium; Matek C, Geppert C, Peng C, Zhi C, Ouyang X, James JA, Loughrey MB, Salto-Tellez M, Brenner H, Hoffmeister M, Truhn D, Schnabel JA, Boxberg M, Peng T, Kather JN. Transformer-based biomarker prediction from colorectal cancer histology: A large-scale multicentric study. Cancer Cell. 2023 Sep 11;41(9):1650-1661.e4. doi: 10.1016/j.ccell.2023.08.002. Epub 2023 Aug 30. PMID: 37652006; PMCID: PMC10507381.
 
+- **`scoring.r`**  
+This script implements the gene scoring procedure. It takes pathology-derived features as input and applies a set of pre-trained models to estimate gene expression levels. Specifically, it generates predicted expression values for 671 risk-associated genes based on the input features.
+
+- **`features.csv`** 
+This file contains the input feature matrix. Features are extracted from H&E whole-slide images (WSIs) using a combination of CTransPath and Transformer-based models, resulting in high-dimensional pathology representations for each sample.
+
+- **`rf_models.rds`**  
+This file stores the pre-trained model parameters used for gene expression prediction. Due to size and sharing constraints, it is not included in this repository. Researchers with reasonable requests may contact the authors to obtain access.
